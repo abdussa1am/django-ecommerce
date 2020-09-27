@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+/* .container{
+   /* height: 200px;
+    width: 900px;
+    float:right;*/
+
+h2{
+    text-align: center;
+}
+
+span.helptext {
+    display: none;
+}
+button{
+    align-items: center;
+}
+</style>
+
+{% load crispy_forms_tags %}
+<form method="post">
+    {% csrf_token %}
+    <div class="container">
+        
+    <div class="row">
+        
+        <div class="form-group col-sm-10 col-lg-8">
+            <h2>Register</h2>
+    {{form|crispy}}
+    <div class="row">
+        <div class="form-group col-sm-12 col-lg-8">
+    <center><button type="submit" class="btn btn-primary">Register</button></center>
+        </div>
+    </div>
+    <p>If you already have an account please<a class="login" href="http://127.0.0.1:8000/accounts/login">Login</a></p>
+</div>
+</form>
+
+
+
+{% endblock %}

@@ -1,0 +1,4 @@
+media/
+.vscode
+__pycache__/
+static/
